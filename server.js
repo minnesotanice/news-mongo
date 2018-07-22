@@ -23,11 +23,24 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Use express.static to serve the public folder as a static directory
 app.use(express.static("public"));
 
-// Connect to the Mongo DB
-mongoose.connect("mongodb://localhost/news");
+
+// -------------DATABASE CONFIGURATION FOR MONGOOSE ------------
+// -------------Define local MongoDB URI ------------
+var databaseUri = "mongodb://localhost/news";
+// -------------------------
+if (process.env.MONGODB_URI) {
+  // THIS EXECUTES WHEN HEROKU APP IS USED
+  mongoose.connect(process.env.MONGODB_URI);
+} else {
+  // THIS EXECUTES WHEN LOCAL APP IS USED
+  mongoose.connect(databaseUri);
+}
+//--------------END database configuration
+
+
+
 
 // Routes
-
 // A GET route for scraping the echoJS website
 app.get("/scrape", function(req, res) {
   console.log("hit the route");
