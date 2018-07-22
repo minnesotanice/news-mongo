@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Mongo News</title>
+  <!-- BOOTSTRAP STYLES -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+    crossorigin="anonymous">
+
+  <!-- CUSTOM STYLES -->
+  <style type="text/css">
+    .pointer:hover {
+      cursor: pointer;
+    }
+  </style>
+
+
+
+</head>
+
+<body>
+  <header class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Mongo News</h1>
+      <p class="lead">Your notes on the news!</p>
+    </div>
+  </header>
+
+
+  <main class="container">
+    <div class="row">
+      <div id="articles" class="col-sm-6">
+
+      </div>
+      <!-- <div id="notes" class="col">
+        
+      </div> -->
+      <div class="col-sm-6">
+        <div class="card">
+          <h5 class="card-header">Notes</h5>
+          <div id="notes" class="card-body">
+              <h5 class="card-title">Click on an article and leave a note about it.</h5>
+            <!-- <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="card">
+          <h5 class="card-header">Featured</h5>
+          <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div> -->
+    </div>
+
+  </main>
+
+
+  <!-- JQUERY -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- FIRE UP THE APP! -->
+  <script src="app.js"></script>
+</body>
+
+</html>
